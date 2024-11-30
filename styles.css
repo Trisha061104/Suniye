@@ -1,0 +1,310 @@
+body {
+    font-family: 'Montserrat',  sans-serif; /* Global font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #f8f8f8;
+}
+
+/* Logo placeholder styling */
+.logo {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation styling */
+.nav-links {
+    display: flex;
+    gap: 5vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 4;
+    min-width: 200px;
+}
+
+.dropdown-content li {
+    padding: 0;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4f4f4;
+    color: #f4a51c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Donate button styling */
+.donate-btn {
+    padding: 8px 16px;
+    background-color:  #6a46a0 ;
+    border-radius: 3pt;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.donate-btn:hover {
+    background-color:  #6a46a0 ;
+    color: #fff;
+}
+
+  .flex-banner {
+    background: url('banner-image.jpg') no-repeat center center/cover; /* Replace with your banner image */
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.0.10); /* Semi-transparent black */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background-color: rgba(29, 28, 28, 0.5); /* Semi-transparent black */
+    z-index: 1;
+}
+
+.banner-content {
+    font-family: 'Montserrat', sans-serif; /* Global font */
+    z-index: 2;
+}
+
+.banner-title {
+    
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for better visibility */
+}
+
+
+  .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .reach-us, .get-in-touch {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .reach-us img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .reach-us p, .reach-us a {
+    line-height: 1.8;
+  }
+
+  .get-in-touch form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .get-in-touch input, 
+  .get-in-touch select, 
+  .get-in-touch textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .get-in-touch button {
+    background-color: #f57c00;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .get-in-touch button:hover {
+    background-color: #e64a19;
+  }
+
+  .map {
+    margin-top: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+  }
+
+.faq-container {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Accordion Button */
+.accordion-button {
+    background-color: #7854b6 !important;
+    color: #fff !important;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px !important;
+    margin: 5px;
+}
+
+.accordion-button:hover {
+    background-color: #6a46a0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff !important;
+    background-color: #f4a51c !important;
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 15px;
+    padding: 15px;
+    border-left: 4px solid #7854b6;
+    border-radius: 5px;
+}
+
+footer {
+    background:#7854b6 ;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #adb5bd;
+}
+
+.bg-orange {
+    background-color: #eeb01f;
+  }
+  
+  .bg-purple {
+    background-color: #7854b6;
+  }
+  
+  footer a {
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  
+/* Styling for the cards */
+.article-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+.article-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.article-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.read-more {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
