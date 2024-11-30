@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audiometry</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      /* Header styling */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+        background-color: #f8f8f8;
+      }
+
+      /* Logo placeholder styling */
+      .logo {
+        width: 80px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Navigation styling */
+      .nav-links {
+        display: flex;
+        gap: 5vw;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #7854b6;
+      }
+
+      /* Dropdown */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        z-index: 2;
+        min-width: 200px;
+      }
+
+      .dropdown-content li {
+        padding: 0;
+      }
+
+      .dropdown-content a {
+        padding: 10px 20px;
+        display: block;
+        text-decoration: none;
+        color: #000000;
+        font-size: 14px;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f4f4f4;
+        color: #f4a51c;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Donate button styling */
+      .donate-btn {
+        padding: 8px 16px;
+        background-color:#7854b6;
+        border-radius: 3pt;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .donate-btn:hover {
+        background-color:#7854b6;
+        color: #fff;
+      }
+
+      .flex-banner {
+        background: url("banner-image.jpg") no-repeat center center/cover; /* Replace with your banner image */
+        height: 400px; /* Adjust height as needed */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.10); /* Semi-transparent black */
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        background-color: rgba(29, 28, 28, 0.5); /* Semi-transparent black */
+        z-index: 1;
+      }
+
+      .banner-content {
+        font-family: "Montserrat", sans-serif; /* Global font */
+        z-index: 2;
+      }
+
+      .banner-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for better visibility */
+      }
+
+      .banner-subtitle {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for better visibility */
+      }
+      .banner {
+        background: url("banner-image.jpg") no-repeat center center/cover; /* Replace with your banner image */
+        height: 400px;
+        position: relative;
+        color: white;
+        text-align: center;
+      }
+
+      .banner-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .banner-content {
+        position: relative;
+        z-index: 1;
+        padding-top: 150px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #7854b6;
+        display: inline-block;
+      }
+
+      .advantage-box,
+      .feature-box {
+        background-color: #eeb01f;
+        padding: 15px;
+        color: #ffffff;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      footer {
+    background:#7854b6 ;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #adb5bd;
+}
+
+.bg-orange {
+    background-color: #eeb01f;
+  }
+  
+  .bg-purple {
+    background-color: #7854b6;
+  }
+  
+  footer a {
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><img src="./logo.png" alt="" /></div>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./speech therapy.html">About Us</a>
+        <a href="./parent.html">Parents</a>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Services</a>
+          <ul class="dropdown-content">
+            <li><a href="./audiometry 2.png">Audiometry</a></li>
+            <li><a href="./speech therapy.html">Speech Therapy</a></li>
+            <li><a href="#">Parent Counselling</a></li>
+            <li><a href="#">School Admission</a></li>
+            <li><a href="#">Cochlear Implant</a></li>
+            <li><a href="#">Disability Rights</a></li>
+          </ul>
+        </li>
+        <a href="./school.html">Suniye School</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#faq">FAQ</a>
+        <a href="./contactUs.html">Contact Us</a>
+      </nav>
+      <button class="donate-btn btn-primary">
+        <a href="./donate.html" style="text-decoration: none; color: white"
+          >Donate</a
+        >
+      </button>
+    </header>
+
+    <!-- Flex Banner -->
+    <div class="flex-banner">
+      <div class="overlay">
+        <img src="./audiometry 2.png" alt="Team photo" class="img-fluid mb-3" />
+      </div>
+      <div class="banner-content">
+        <h1 class="banner-title">Audiometry test</h1>
+        <p class="banner-subtitle">
+          Here you can find information about our process and services.
+        </p>
+        <a href="#about" class="btn mt-3" style="background-color: #7854b6; color: #ffffff;">Learn More</a>
+      </div>
+    </div>
+    <!-- Flex Banner 
+ <div class="flex-banner">
+    <div class="overlay">
+     
+        <img src="Screenshot 2024-11-28 205958.png" alt="Team photo" class="img-fluid mb-3">
+        
+    </div>
+    <div class="banner-content">    <h1 class="banner-title">Audiometry test - Suniye</h1>
+        <p class="banner-subtitle">Here you can find information about our process and services.</p>
+        <a href="#about" class="btn btn-primary mt-3" >Learn More</a>
+    </div>
+</div>-->
+
+    <!-- Content Section -->
+    <div class="container py-5">
+      <!-- Description Section -->
+      <div class="row" style="margin-left: 2px;">
+        <div class="col-md-8">
+          <h2 class="section-title">Our Audiologist</h2>
+          <p>
+            People are capable of hearing sound waves with 
+            frequencies between 20 – 20,000 Hz. 
+            The Audiometry test evaluates the strength
+             as well as tone of the sound and also stabilizes
+              concerns associated with the performance of the internal ear.
+               Pure tone test aids to determine the quietest audio that you can hear at various pitches.
+                Suniye’s audiologist will help students with audiometry tests on speech discrimination ability, 
+                mechanical audio transmission (function of the middle ear), and neural audio transmission (function of the cochlea).
+
+            Did you hear about Suniye’s free Speech Therapy In Delhi checkup? If not then bring your hearing impaired child at our special school for hearing impaired
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="IMG-20211021-WA0023.jpg"
+            alt="Child Audiologist"
+            class="img-fluid rounded"
+          />
+          <!-- Replace image1.jpg -->
+        </div>
+      </div>
+
+      <!-- How Audiology Helps Section -->
+      <div class="container py-5">
+        <!-- Description Section -->
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="section-title">How Audiology can help your child</h2>
+            <p>
+                Audiometry is a vital tool in identifying and addressing hearing issues in children, 
+                which are often subtle but can significantly impact their development. Regular audiometric 
+                testing can detect hearing impairments early, ensuring timely intervention and treatment. 
+                This is especially crucial for young children, as hearing is closely linked to speech development,
+                 learning, and social interactions. By diagnosing conditions like hearing loss, auditory processing disorders,
+                  or even temporary issues caused by ear infections, audiometry helps pave the way for targeted therapies and support systems. 
+                  Early identification and management through audiometry can empower your child to thrive academically, socially, and emotionally.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="resize3.jpg"
+              alt="Child Audiologist"
+              class="img-fluid rounded"
+            />
+            <!-- Replace image1.jpg -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Advantages Section -->
+      <div class="row py-5">
+        <div class="col-md-6">
+          <h2 class="section-title">Advantages</h2>
+          <div class="feature-box">
+            EARLY DECTECTION
+          </div>
+          <div class="feature-box">
+            IMPROVED SPEECH DEVELOPMENT
+          </div>
+          <div class="feature-box">
+            ACADEMIC SUCCESS
+          </div>
+          <div class="feature-box">
+            SOCIAL ENGAGEMENT
+          </div>
+          <div class="feature-box">
+            CUSTOMIZED TREATMENT
+          </div>
+          <div class="feature-box">
+            MONITORING PROGRESS
+          </div>
+          <div class="feature-box">
+            PREVENTION OF FURTHER ISSUES
+          </div>
+          <div class="feature-box">
+            BOOSTED CONFIDENCE
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2 class="section-title">Audiological Facilities</h2>
+          <div class="feature-box">
+            PURE TONE AUDIOMETRY (PTA)
+          </div>
+          <div class="feature-box">
+            FREE FIELD AUDIOMETRY
+          </div>
+          <div class="feature-box">
+            SPEECH AUDIOMETRY
+          </div>
+          <div class="feature-box">
+            QAE
+          </div>
+          <div class="feature-box">
+            TYMPANOMETRY
+          </div>
+          <div class="feature-box">
+            HEARING AID TRIAL
+          </div>
+          <div class="feature-box">
+            COCHLEAR IMPLANT MAPPING
+          </div>
+          <div class="feature-box">
+            ELECTROCOCHLEOGRAPHY
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <!-- Footer -->
+    <footer class="bg-orange text-white">
+      <div class="container py-5">
+          <div class="row">
+              <div class="col-md-5" style="margin-right: 15px;">
+                  <h4>About Us</h4>
+                  <p>Our aim is to train hearing impaired children in speech and language so that they can maximise their potential and make their own choices in their career and in life.</p>
+                  <a href="#" class="btn btn-light">Know More</a>
+              </div>
+              <div class="col-md-2">
+                  <h5>Explore</h5>
+        <ul class="list-unstyled">
+          <li><a href="./parent.html" class="text-white">For Parents</a></li>
+          <li><a href="./school.html" class="text-white">School</a></li>
+          <li><a href="#" class="text-white">Terms</a></li>
+          <li><a href="#" class="text-white">Privacy</a></li>
+        </ul>
+              </div>
+              <div class="col-md-2">
+                  <h5>Join Us</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Donate</a></li>
+                    <li><a href="#" class="text-white">Volunteer</a></li>
+                    <li><a href="#" class="text-white">Your Rights</a></li>
+                    <li><a href="#" class="text-white">Sitemap</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-2">
+                  <h5>Contact Us</h5>
+                  <p>Email: <a href="mailto:contact@suniye.in" class="text-white">contact@suniye.in</a></p>
+                  <p>Phone: <a href="tel:+919873031973" class="text-white">+91 98 7303 1973</a></p>
+              
+            <div class="d-flex gap-2">
+               <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+               <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+               <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+               <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+            </div>
+              </div>
+          </div>
+      </div>
+    
+
+  
+  </footer>
+
+  <footer>
+      <div class="bg-purple text-center">
+          <p>2023 All Rights Reserved By Suniye | Developed by Trisha Jain, Tanvi Divedi, Zoya Warsi, Krisha Srinivas and Ishita Panda</p>
+        </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
