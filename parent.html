@@ -209,6 +209,23 @@ footer a {
         font-family: "Montserrat", sans-serif; /* Global font */
         font-weight: bold;
       }
+
+     
+    .accordion-button:not(.collapsed) {
+      color: #fff;
+      background-color: #6c5ce7;
+    }
+    .accordion-button {
+      color: #6c5ce7;
+    }
+    .image-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
     </style>
   </head>
   <body>
@@ -223,15 +240,14 @@ footer a {
           <ul class="dropdown-content">
             <li><a href="./audiometry.html">Audiometry</a></li>
             <li><a href="./speech therapy.html">Speech Therapy</a></li>
-            <li><a href="#">Parent Counselling</a></li>
-            <li><a href="#">School Admission</a></li>
-            <li><a href="#">Cochlear Implant</a></li>
-            <li><a href="#">Disability Rights</a></li>
+            
+            <li><a href="./cochlear implant.html">Cochlear Implant</a></li>
+          
           </ul>
         </li>
         <a href="./school.html">Suniye School</a>
-        <a href="#blogs">Blogs</a>
-        <a href="#faq">FAQ</a>
+        <a href="./blog.html">Blogs</a>
+        <a href="./faq.html">FAQ</a>
         <a href="./contactUs.html">Contact Us</a>
       </nav>
       <button class="donate-btn btn-primary">
@@ -316,7 +332,7 @@ Since there are no visual indicators, most hearing impaired children are not ide
       </div>
     </div>
 
-    <!-- Cards Section -->
+    <!-- Cards Section 
     <div class="cards-section py-5 bg-light">
       <div class="container">
         <div class="row">
@@ -365,7 +381,7 @@ Since there are no visual indicators, most hearing impaired children are not ide
       </div>
     </div>
 
-    <br />
+    <br />-->
 
     <!-- Flex Banner -->
     <div class="flex-banner">
@@ -390,7 +406,7 @@ Since there are no visual indicators, most hearing impaired children are not ide
     </div> -->
 
     <!-- Content Section -->
-    <div class="container py-5">
+   <div class="container py-5">
       <!-- Description Section -->
       <div>
         <div>
@@ -410,24 +426,95 @@ Since there are no visual indicators, most hearing impaired children are not ide
       <div class="container py-5">
         <!-- Description Section -->
         <div class="row">
-          <div class="col-md-8">
-            <h2 class="section-title"></h2>
-            <h5>How do I know which hearing aid is best for me?</h5>
-            <br />
-            <h5>How does a hearing aid help with sensorineural loss?</h5>
-            <br />
-            <h5>How does a hearing aid help with conductive hearing loss?</h5>
-            <br />
-            <h5>What are the common issues faced with hearing aids?</h5>
-            <br />
-            <h5>Who are the intended recipients?</h5>
-          </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
+            
+            <div class="accordion" id="faqAccordion">
+
+                <!-- Question 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #000000;">
+                            What is a Behind-The-Ear (BTE) Hearing Aid?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                          BTE hearing aids consist of a case which hangs behind the pinna, the rear part of the ear. 
+                          The case is attached to an earmold or dome tip by a traditional tube, slim tube, or wire. 
+                          The tube or wire courses from the superior-ventral portion of the pinna to the concha,
+                           where the ear mould or dome tip inserts into the external auditory canal.         
+                           The case contains the electronics, controls, battery, and microphone(s). The loudspeaker,
+                           or receiver, may be housed in the case (traditional BTE) or in the ear mould or dome tip (receiver-in-the-canal, or RIC). 
+                           The RIC style of BTE hearing aid is often smaller than a traditional BTE and more commonly used in more active populations
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #000000 ;">
+                            Where are Behind-The-Ear (BTE) Hearing Aids used best?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                          BTEs are generally capable of providing more output and may therefore be indicated for more severe degrees of hearing loss.
+                           However, BTEs are very versatile and can be used for nearly any kind of hearing loss. BTEs come in a variety of sizes, ranging from the small ‘mini BTE’, 
+                           to larger ultra-power devices. Size typically depends on the output level needed, the location of the receiver, and the presence or absence of a telecoil. 
+                           BTEs are durable, easy to repair, and often have controls and battery doors that are easier to manipulate. 
+                          BTEs are also easily connected to assistive listening devices, such as FM systems and induction loops. BTEs are commonly worn by children who need a durable type of hearing aid.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: #000000;">
+                            What is an In-The-Ear Hearing Aid?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                          In-The-Ear Hearing Aids (ITE) devices fit in the outer ear bowl (called the concha). 
+                          Being larger, these are easier to insert and can hold extra features. 
+                          They are sometimes visible when standing face to face with someone. 
+                          ITE hearing aids are custom made to fit the individual’s ear. 
+                          They can be used in mild to some severe hearing losses. 
+                          Feedback, a squealing/whistling caused by sound (particularly high frequency sound) leaking and being amplified again, 
+                          may be a problem for severe hearing losses. Some modern circuits can provide feedback regulation or cancellation to assist with this. 
+                          Venting may also cause feedback. A vent is a tube primarily placed to offer pressure equalization. However, 
+                          different vent styles and sizes can be used to influence and prevent feedback.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color: #000000;">
+                            Where are In-The-Ear (ITE) Hearing Aids used best?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                          Traditionally, ITEs have not been recommended for young children because their fit could not be as easily modified as the ear mould for a BTE, 
+                          and thus the aid had to be replaced frequently as the child grew. However, there are new ITEs made from a silicone type material that mitigates the need for costly replacements. 
+                          ITE hearing aids can be connected wirelessly to FM systems, for instance with a body-worn FM receiver with induction neck-loop which transmits the audio signal from the FM transmitter inductively to the telecoil inside the hearing instrument.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+          <div class="col-md-6">
             <img
               src="Types-of-Hearing-Aids-1.png"
               alt="Child Audiologist"
-              class="img-fluid rounded"
-              style="height: 100%; width: 100%"
+              class="rounded"
+              style="width: 600px ;"
             />
             <!-- Replace image1.jpg -->
           </div>
@@ -435,23 +522,7 @@ Since there are no visual indicators, most hearing impaired children are not ide
       </div>
     </div>
 
-      <br />
-      <!-- Flex Banner -->
-      <div class="flex-banner">
-        <div class="overlay">
-          <img
-            src="./pict_large1.jpg"
-            alt="Team photo"
-            class="img-fluid mb-3"
-          />
-        </div>
-        <div class="banner-content">
-          <h1 class="banner-title">Hearing Aids and Cochlear Implant</h1>
-          <p class="banner-subtitle"></p>
-          
-        </div>
-      </div>
-
+   
       <!-- Flex Banner 3
 <div class="flex-banner">
     <div class="overlay">
@@ -464,88 +535,7 @@ Since there are no visual indicators, most hearing impaired children are not ide
     </div> -->
 
       <br />
-      <!-- Content Section -->
-      <div class="container py-5">
-        <!-- Description Section -->
-        <div class="row">
-          <div class="col-md-8">
-            <h2 class="section-title"></h2>
-            <h5>How do I know which hearing aid is best for me?</h5>
-            <br />
-            <h5>How does a hearing aid help with sensorineural loss?</h5>
-            <br />
-            <h5>How does a hearing aid help with conductive hearing loss?</h5>
-            <br />
-            <h5>What are the common issues faced with hearing aids?</h5>
-            <br />
-            <h5>Who are the intended recipients?</h5>
-          </div>
-          <div class="col-md-4">
-            <img
-              src="Untitled-design-2021-10-12T145204.317.png"
-              alt="Child Audiologist"
-              class="img-fluid rounded"
-              style="height: 100%; width: 100%"
-            />
-            <!-- Replace image1.jpg -->
-          </div>
-        </div>
-        <br />
-        <br />
-
-         <!-- Cards Section -->
-    <div class="cards-section py-5 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-             
-              <div class="card-body">
-                <p class="card-text">
-                  Being a school for the hearing impaired we can tell you to always find occasions and reasons to play with the hearing impaired child – this is not just the mother’s duty. 
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              
-              <div class="card-body" style="height: 175px;">
-                <p class="card-text" style="margin-top: 25px;">
-                  All the family members need to make sure that they spend part of the day talking or playing with the child.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-             
-              <div class="card-body" style="height: 175px;">
-                <p class="card-text">
-                  Make sure everyone speaks to the child in a normal tone and manner. 
-                  The face of the adult and child needs to be at the same level to ensure the best hearing and lip reading.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              
-              <div class="card-body" style="height: 175px;">
-                <p class="card-text" style="margin-top: 25px;">
-                  Make the child repeat after you as many times till she or he does not learn how to say something clearly
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-        
-
-        <br />
-        <br />
-      </div>
+      
     </div>
     <!-- Footer -->
     <footer class="bg-orange text-white">
