@@ -1,0 +1,218 @@
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #f8f8f8;
+    z-index: 2;
+  }
+
+  /* Logo placeholder styling */
+  .logo {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Navigation styling */
+  .nav-links {
+    display: flex;
+    gap: 5vw;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    color: #7854b6 ;
+  }
+
+  /* Dropdown */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 5;
+    min-width: 200px;
+  }
+
+  .dropdown-content li {
+    padding: 0;
+  }
+
+  .dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f4f4f4;
+    color: #f4a51c;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Donate button styling */
+  .donate-btn {
+    padding: 8px 16px;
+    background-color: #7854b6 ;
+    border-radius: 3pt;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .donate-btn:hover {
+    background-color: #7854b6 ;
+    color: #fff;
+  }
+
+  /* Donate button styling */
+  .donate-btn {
+    padding: 8px 16px;
+    background-color: #7854b6 e;
+    border-radius: 3pt;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .donate-btn:hover {
+    background-color: #7854b6 ;
+    color: #fff;
+  }
+  body {
+    font-family: "Montserrat", sans-serif; /* Global font */
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif; /* Global font */
+  }
+
+  .flex-banner {
+    background: url("banner-image.jpg") no-repeat center center/cover; /* Replace with your banner image */
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.10); /* Semi-transparent black */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background-color: rgba(29, 28, 28, 0.5); /* Semi-transparent black */
+    z-index: 1;
+  }
+
+  .banner-content {
+    font-family: "Montserrat", sans-serif; /* Global font */
+    z-index: 2;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for better visibility */
+  }
+
+  .banner-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for better visibility */
+  }
+  .image-section img {
+    width: 40%;
+    height: auto;
+    align-self: center;
+  }
+  .hero {
+    background: #f8f9fa;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .cards-section .card {
+    border: none;
+    text-align: center;
+    color: #f8f9fa;
+    background: #eeb01f;
+  }
+  footer {
+background:#7854b6 ;
+color: #ffffff;
+padding: 20px 0;
+}
+
+footer a {
+color: #adb5bd;
+}
+
+.bg-orange {
+background-color: #eeb01f;
+}
+
+.bg-purple {
+background-color: #7854b6;
+}
+
+footer a {
+text-decoration: none;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+
+  .p {
+    font-family: "Montserrat", sans-serif; /* Global font */
+    font-weight: bold;
+  }
+  .faq-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.faq-section {
+    margin-bottom: 30px;
+}
+.accordion-button:after {
+    content: '\002B'; /* "+" symbol */
+    font-size: 1.2rem;
+    margin-left: auto;
+}
+.accordion-button.collapsed:after {
+    content: '\2212'; /* "-" symbol */
+    background-color:#eeb01f;
+}
+.faq-image img {
+    max-width: 100%;
+    height: auto;
+}
